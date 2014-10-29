@@ -1,5 +1,98 @@
 <link rel="import" href="components/polymer/polymer.html">
+<!--
+`x-contact` encapsulates a contact page into a web component.
 
+    <x-contact id="contact"> </x-contact>
+
+`x-projects` has a two column graphic: left column contains a title, a description, contacts, and a map; right column contains a title, a description and a contact form.
+
+Left column:
+
+      <div id="columnLeft" class="col-md-3">
+        <h2> {{ contact }} </h2>
+        <p> {{ description }} </p>
+        <div id="containerContact">
+          <address>
+            <img id="mailIcon"src="images/email.jpg"> <a href="mailto:{{mail}}">{{mail}}</a>
+          </address>
+          <address>
+            <img id="phoneIcon"src="images/phone.jpg"> <a href="tel:{{phone}}">{{phone}}</a>
+          </address>
+        </div>
+          <h3>{{ map }}</h3>
+          <p> {{ map_description }}</p>
+          <map-element latitude="41.855464" longitude="12.467707" zoom="15"></map-element>
+        </div>
+
+The usage of `map-element` is described in the element owner's documentation.
+
+Right column:
+      <div id="columnRight" class="col-md-3">
+        <div class="wrapper">
+    
+          <form id="contact-form" action="/" method="post">
+            <h2>You can email us</h2>
+            <p id="formDescription" >Fill in the form below, and we'll get back to you within 24 hours.</p>
+            <div>
+              <label>
+                <span>Name: (required)</span>
+                <input placeholder="enter your name" type="text" tabindex="1" required autofocus>
+              </label>
+            </div>
+            <div>
+              <label>
+                <span>Email: (required)</span>
+                <input placeholder="enter your email" type="email" tabindex="2" required>
+              </label>
+            </div>
+            <div>
+              <label>
+                <span>Telephone: (required)</span>
+                <input placeholder="enter your number" type="tel" tabindex="3" required>
+              </label>
+            </div>
+            <div>
+              <label>
+                <span>Message: (required)</span>
+                <textarea placeholder="write your message" tabindex="5" required></textarea>
+              </label>
+            </div>
+            <div>
+              <button name="submit" type="submit" id="contact-submit"> <img id="sendIcon" src="images/send.jpg"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+These values are setted in the `demo.html` file, as described below:
+   
+
+    <script >
+      var el = document.getElementById('contact');
+      var mail= "gta.web2014@gmail.com";
+      var phone= "+39 320 34 21 82 1";
+      var contact= "Get in touch with us";
+      var description= "Our offices are happy to help you";
+      var map= "Where to find us";
+      var map_description= "address";
+
+      el.mail = mail;
+      el.contact = contact;
+      el.mail = mail;
+      el.phone = phone;
+      el.description = description;
+      el.map = map;
+      el.map_description = map_description;
+    </script>
+
+
+
+
+@element x-contact
+@blurb Element providing page contact.
+@status alpha
+@homepage https://x-element.github.io/x-contact
+-->
 <polymer-element name="x-contact">
   <template>
  
