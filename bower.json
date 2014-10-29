@@ -1,0 +1,26 @@
+{
+  "name": "x-contact",
+  "version": "1.0.0",
+  "homepage": "http://x-element.github.io/x-contact",
+  "authors": [
+    "AndryGP tizianosperati"
+  ],
+  "description": "x-contact encapsulates a contact page into a web component",
+  "main": "x-contact.html",
+  "keywords": [
+    "polymer",
+    "x-contact",
+    "contact",
+    "web-component",
+    "web-components",
+    "x-element"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
