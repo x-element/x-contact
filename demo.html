@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style> 
+		body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			font-family: 'RobotoDraft', sans-serif;
+
+		}
+		h1 {
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			font-weight: 100;
+			text-align: center;
+		}
+		
+		h2 {
+			font-variant: small-caps;
+
+			font-weight: 100; 
+		}
+ 		
+	</style>
+  <head>
+    <script src="components/platform/platform.js"></script>
+    <link rel="import" href="x-contact.html">
+    <link rel="import" href="map-element.html">
+    <link rel="import" href="components/font-roboto/roboto.html">
+
+
+
+  </head>
+
+  <body style="background-color: #d2eecb">
+  	<x-contact id="contact">
+  	</x-contact>
+  	<script >
+      var el = document.getElementById('contact');
+      var mail= "gta.web2014@gmail.com";
+      var phone= "+39 320 34 21 82 1";
+      var contact= "Get in touch with us";
+      var description= "Our offices are happy to help you";
+      var map= "Where to find us";
+      var map_description= "address";
+
+      el.mail = mail;
+      el.contact = contact;
+      el.mail = mail;
+      el.phone = phone;
+      el.description = description;
+      el.map = map;
+      el.map_description = map_description;
+    </script>
+  </body>
+</html>
