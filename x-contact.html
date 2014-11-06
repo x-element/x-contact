@@ -2,147 +2,104 @@
 
 <polymer-element name="x-contact">
   <template>
- 
-  <link rel="stylesheet" href="components/bootstrap/bootstrap.min.css">
-    <link rel="import" href="elements/map-element.html">
+	  <link rel="import" href="elements/map-element.html">
+	  <link rel="stylesheet" href="components/x-bootstrap/x-bootstrap.css">
 
-  <style>
-    :host {
-      display: block;
-    }
-    h2 {
-      font-variant: small-caps;
-      font-weight: 400; 
-      font-size: 24px;
-    }
-    h3 {
-          font-size: 20px;
-          font-weight: 500;
-          font-variant: small-caps;
-      }
-    p {
-        font-size: 18px;
-        font-weight: 300;
-    }
-  #map {
-    display: block;
-    height: 200px;
-    width: 200px;
-  }
-  #mailIcon {
-    height: 20px;
-    width: 20px;
-  }
-   #phoneIcon {
-    height: 20px;
-    width: 20px;
-  }
+	  <style>
+	    :host {
+	      display: block;
+	    }
 
-  #containerContact {
-    margin-top: 20px;
-  }
-  input {
-    border-radius: 3px;
-    border: none;
-    margin-top: 5px;
-    margin-bottom: 15px;
+	    h2 {
+	    	font-variant: small-caps;
+	    	font-weight: 400; 
+				font-size: 24px;
+	    }
 
-  }
-  textarea {
-    border-radius: 3px;
-    border: none;
-    margin-top: 5px;
-    margin-bottom: 15px;
-  }
+	    h3 {
+				font-size: 20px;
+				font-weight: 500;
+				font-variant: small-caps;
+	    }
 
-  map-element::shadow .map{
-      width: 100%;
-      height: 300px;
-    }
+	    p {
+				font-size: 18px;
+				font-weight: 300;
+	    }
+
+	  	#map {
+		    display: block;
+		    height: 200px;
+		    width: 200px;
+			}
+
+	  	#mailIcon {
+		    height: 20px;
+		    width: 20px;
+			}
+
+			#phoneIcon {
+		    height: 20px;
+		    width: 20px;
+			}
+
+	  	input {
+		    
+		    margin-top: 5px;
+		    margin-bottom: 15px;
+	  	}
+
+	  	textarea {
+		    
+		    margin-top: 5px;
+		    margin-bottom: 15px;
+	  	}
+
+	  	map-element::shadow .map {
+				width: 100%;
+				height: 200px;
+	    }
 
 
-  #formDescription {
-    margin-bottom: 40px;
-  }
+	  </style>
 
-  #sendIcon {
-    height: 40px;
-    width: 40px;
-  }
-  #contact-submit {
-    background-color: transparent;
-    border:none;
-  }
 
-  label {
-    font-weight: 300;
-    margin-bottom: 16px;
-  }
-  </style>
-    <div id="contact">
-      <div id="columnLeft2" class="col-md-3">
-      </div>
+		<div id="contact">
+	    <div id="columnLeft2" class="col-md-3">
+	    </div>
 
-      <div id="columnLeft" class="col-md-3">
-         <h2> {{ contact }} </h2>
-         <p> {{ description }} </p>
-         <div id="containerContact">
-           <address>
-              <img id="mailIcon"src="images/email.jpg"> <a href="mailto:{{mail}}">{{mail}}</a>
-            </address>
-            <address>
-              <img id="phoneIcon"src="images/phone.jpg"> <a href="tel:{{phone}}">{{phone}}</a>
-           </address>
-         </div>
-           <h3>{{ map }}</h3>
-           <p> {{ map_description }}</p>
-           <map-element latitude="41.855464" longitude="12.467707" zoom="15"></map-element>
-         
-         
-      </div>
-      
-      <div id="columnRight" class="col-md-3">
-        <div class="wrapper">
-    
-    <!-- Form -->
-          <form id="contact-form" action="/" method="post">
-            <h2>You can email us</h2>
-            <p id="formDescription" >Fill in the form below, and we'll get back to you within 24 hours.</p>
-            <div>
-              <label>
-                <span>Name: (required)</span>
-                <input placeholder="enter your name" type="text" tabindex="1" required autofocus>
-              </label>
-            </div>
-            <div>
-              <label>
-                <span>Email: (required)</span>
-                <input placeholder="enter your email" type="email" tabindex="2" required>
-              </label>
-            </div>
-            <div>
-              <label>
-                <span>Telephone: (required)</span>
-                <input placeholder="enter your number" type="tel" tabindex="3" required>
-              </label>
-            </div>
-            <div>
-              <label>
-                <span>Message: (required)</span>
-                <textarea placeholder="write your message" tabindex="5" required></textarea>
-              </label>
-            </div>
-            <div>
-              <button name="submit" type="submit" id="contact-submit"> <img id="sendIcon" src="images/send.jpg"></button>
-            </div>
-          </form>
-          <!-- /Form -->
-          
-        </div>
-      </div>
-      <div id="columnRight2" class="col-md-3">
-      </div>
-    </div>
+	    <div id="columnLeft" class="col-md-3">
+				<h2> {{ contact }} </h2>
+				<p> {{ description }} </p>
+				<div id="containerContact">
+				 <address>
+				    <img id="mailIcon"src="images/email.jpg"> <a href="mailto:{{mail}}">{{mail}}</a>
+				  </address>
+				  <address>
+				    <img id="phoneIcon"src="images/phone.jpg"> <a href="tel:{{phone}}">{{phone}}</a>
+					</address>
+				</div>
+				 <h3>{{ map }}</h3>
+				 <p> {{ map_description }}</p>
+				 <map-element latitude="41.855464" longitude="12.467707" zoom="15"></map-element>
+			</div>
+	      
+	  	<div id="columnRight" class="col-md-3">
+	    	<h2>You can email us</h2>
+	      	<p id="formDescription" >Fill in the form below, and we'll get back to you within 24 hours.</p>
+	      	<div class="input-group">
+				<input type="text" class="form-control" placeholder="Name">
+				<input type="text" class="form-control" placeholder="Email">
+				<input type="text" class="form-control" placeholder="Telephone">
+				<textarea class="form-control" rows="5" placeholder="Message"></textarea>
+				<button type="button" class="btn btn-default"> Send </button>
+				</div>
+	    </div>
+
+	    <div id="columnRight2" class="col-md-3">
+	    </div>
+
+		</div>
     
       
   </template>
@@ -151,5 +108,5 @@
       
       
     });
-</script>
+	</script>
 </polymer-element>
