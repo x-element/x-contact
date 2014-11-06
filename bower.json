@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "homepage": "http://x-element.github.io/x-contact",
   "authors": [
-    "AndryGP tizianosperati"
+  { "name": "Andrea D'Amelio", "email": "andrea.damelio@gmail.com" },
+  { "name": "Tiziano Sperati", "email": "tiziano.sperati@gmail.com" },
   ],
   "description": "x-contact encapsulates a contact page into a web component",
   "main": "x-contact.html",
